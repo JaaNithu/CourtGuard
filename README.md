@@ -1,3 +1,4 @@
+# CourtGuard
 CourtGuard is a justice management system tailored for court environments, specifically designed to handle updates, deletions, and insertions of offender details. This application streamlines the process of managing offender information, ensuring accuracy, security, and compliance with legal standards.
 
 Key Features
@@ -13,22 +14,22 @@ git clone https://github.com/your-username/CourtGuard.git
 
 Install dependencies:
 
-# Navigate to the project directory
+-Navigate to the project directory
 cd CourtGuard
 
-# Install dependencies using npm
+-Install dependencies using npm
 npm install
 
 Configure the environment:
 
-# Create a .env file based on the provided .env.example
+-Create a .env file based on the provided .env.example
 cp .env.example .env
 
-# Edit the .env file and provide necessary configuration details
+-Edit the .env file and provide necessary configuration details
 
 Start the application:
 
-# Start the development server
+-Start the development server
 npm start
 
 Access CourtGuard at http://localhost:3000 in your browser.
