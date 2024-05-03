@@ -18,21 +18,25 @@ git clone https://github.com/your-username/CourtGuard.git
 Install dependencies:
 
 -Navigate to the project directory
-cd CourtGuard
+
+*cd CourtGuard*
 
 -Install dependencies using npm
-npm install
+
+*npm install*
 
 Configure the environment:
 
 -Create a .env file based on the provided .env.example
-cp .env.example .env
+
+*cp .env.example .env*
 
 -Edit the .env file and provide necessary configuration details
 
 Start the application:
 
 -Start the development server
-npm start
 
-Access CourtGuard at http://localhost:3000 in your browser.
+*npm start*
+
+Access CourtGuard at *http://localhost:3000* in your browser.
