@@ -3,8 +3,11 @@ CourtGuard is a justice management system tailored for court environments, speci
 
 Key Features
 Efficient Offender Management: CourtGuard provides a user-friendly interface for court administrators and personnel to efficiently manage offender details.
+
 Security and Compliance: Built with robust security measures, CourtGuard ensures compliance with legal standards and regulations, safeguarding sensitive offender information.
+
 Flexibility: CourtGuard offers flexible functionalities for updating, deleting, and inserting offender details, allowing court personnel to adapt to changing requirements.
+
 Scalability: With a scalable architecture, CourtGuard can handle large volumes of offender data, ensuring smooth operations for courts of any size.
 
 Installation
