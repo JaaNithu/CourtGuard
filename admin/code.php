@@ -28,6 +28,13 @@ if(isset($_POST['addUser']))
     $role_name = mysqli_real_escape_string($con, $_POST['role_name']);
     $role = mysqli_real_escape_string($con, $_POST['role']) == true ? '1' : '0';
 
+    $hashFormat = "$2y$10$";
+    $salt = "createstrengthnpassword25";
+    $hashF_and_salt = $hashFormat . $salt;
+
+    $password = crypt($password, $hashF_and_salt);
+
+
     if ($name != '' || $email != '' || $password !='' || $role_name != '')
     {
         $user_query = "INSERT INTO user (name,email,password,role_name, role) VALUES ('$name', '$email', '$password','$role_name', '$role')";
@@ -60,6 +67,13 @@ if (isset($_POST['updateUserDetails']))
     $password = $_POST['password'];
     $role_name = $_POST['role_name'];
     $role = $_POST['role'] == true ? '1' : '0';
+
+    $hashFormat = "$2y$10$";
+    $salt = "createstrengthnpassword25";
+    $hashF_and_salt = $hashFormat . $salt;
+
+    $password = crypt($password, $hashF_and_salt);
+
 
     if ($name != '' || $email != '' || $password !='' || $role_name != '')
     {
