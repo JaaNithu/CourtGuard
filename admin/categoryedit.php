@@ -32,7 +32,7 @@
 
                                         foreach($query_run as $type) :
                                         ?>
-                                        <input type="hidden" name="cate_id" <?= $type['cat_id']?>>
+                                        <input type="hidden" name="cat_id" <?= $type['cat_id']?>>
 
                                         <div class="modal-body">
                                             <div class="form-group">
