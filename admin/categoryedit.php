@@ -23,36 +23,32 @@
                         <div class="card-body">
                             <form action="categorydb.php" method="POST">
                                 <?php
-
-                                    if (isset($_GET['cat_id'])) 
+                                    if (isset($_GET['cat_id']))
                                     {
                                         $cate_id = $_GET['cat_id'];
-                                        $query = "SELECT * FROM offense_category WHERE cat_id='$cate_id'";
+                                        $query = "SELECT * FROM offense_category WHERE cat_id='$cate_id' ";
                                         $query_run = mysqli_query($con, $query);
 
                                         foreach($query_run as $type) :
                                         ?>
-                                        <input type="hidden" name="cat_id" <?= $type['cat_id']?>>
+                                        <input type="hidden" name="cate_id" <?= $type['cat_id']?>>
 
                                         <div class="modal-body">
                                             <div class="form-group">
                                                 <label for="">Category Name</label>
                                                 <input type="text" name="name" value="<?php echo $type['name'];?>" class="form-control" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="">Status</label>
-                                                <input type="checkbox" name="status" <?php echo $type['status'] == "1" ? 'checked' : ''; ?>> Status
-                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <a href="category.php" class="btn btn-secondary" type="button">Back</a>
+
                                             <button class="btn btn-primary" name="category_update" type="submit">Update</button>
                                         </div>
 
                                     <?php
                                     endforeach;
                                     }
-                                    else 
+                                    else
                                     {
                                         echo "No ID Found";
                                     }

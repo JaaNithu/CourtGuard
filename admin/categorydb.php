@@ -5,9 +5,8 @@ include('config/dbcon.php');
 if(isset($_POST['category_save']))
 {
     $name = $_POST['name'];
-    $status = $_POST['status'] == true ? '1' : '0';
 
-    $category_query = "INSERT INTO offense_category (name,status) VALUES ('$name', '$status')";
+    $category_query = "INSERT INTO offense_category (name) VALUES ('$name')";
     $category_query_run = mysqli_query($con, $category_query);
 
     
@@ -25,11 +24,10 @@ if(isset($_POST['category_save']))
 
 if (isset($_POST['category_update']))
 {
-    $cate_id = $_POST['cat_id'];
+    $cate_id = $_POST['cate_id'];
     $name = $_POST['name'];
-    $status = $_POST['status'] == true ? '1' : '0';
 
-    $query = "UPDATE offense_category SET name='$name', status='$status' WHERE cat_id= '$cate_id' ";
+    $query = "UPDATE offense_category SET name='$name' WHERE cat_id= '$cate_id' ";
     $query_run = mysqli_query($con, $query);
 
     if ($query_run)

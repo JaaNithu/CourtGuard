@@ -56,9 +56,7 @@
                                     <tr>
                                         <th>Id</th>
                                         <th>Name</th>
-                                        <th>Status</th>
                                         <th>View</th>
-                                        <th>Edit</th>
                                         <th>Delete</th>
                                     </tr>
                                 </thead>
@@ -76,14 +74,9 @@
                                                         <td><?php echo $cate['cat_id'];?></td>
                                                         <td><?php echo $cate['name'];?></td>
                                                         <td>
-                                                            <input type="checkbox"  <?php echo $cate['status'] == '1' ? 'checked' : '';?> readonly/>
+                                                            <a href="categoryView.php?cate_id=<?php echo $cate['cat_id']; ?>" class="btn btn-info" style="margin-right: 10px;">View</a>
                                                         </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-info" style="margin-right: 10px;">View</a>
-                                                        </td>
-                                                        <td>
-                                                            <a href="categoryedit.php?cat_id=<?php echo $cate['cat_id'];?>" class="btn btn-success" style="margin-right: 10px;">Edit</a>
-                                                        </td>
+                                                        
                                                         <td>
                                                             <form action="categorydb.php" method="POST">
                                                                 <input type="hidden" name="cate_delete_id" value="<?= $cate['cat_id'];?>">
