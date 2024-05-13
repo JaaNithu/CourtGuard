@@ -23,8 +23,8 @@
                         <input type="text" name="name" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Status</label>
-                        <input type="checkbox" name="status"> Yes
+                        <label for="" hidden>Status</label>
+                        <input type="checkbox" name="status" hidden> Yes
                     </div>
                 </div>
                 <div class="modal-footer">
