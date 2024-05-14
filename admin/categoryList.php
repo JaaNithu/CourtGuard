@@ -160,8 +160,7 @@
                     <div class="card mt-4">
                         <div class="card-header">
                             <h4>
-                                Category of Offense
-                                <a href="#" data-toggle="modal" data-target="#categoryModal" class="btn btn-primary float-right">Add</a>
+                                Category of Offense Count
                             </h4>
                         </div>
                         <div class="card-body">
