@@ -22,10 +22,6 @@
                         <label for="">Category Name</label>
                         <input type="text" name="name" class="form-control" required>
                     </div>
-                    <div class="form-group">
-                        <label for="" hidden>Status</label>
-                        <input type="checkbox" name="status" hidden> Yes
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
@@ -51,7 +47,7 @@
                             </h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered table-striped" id="example">
+                            <table class="table table-bordered table-striped" id="example1">
                                 <thead>
                                     <tr>
                                         <th>Id</th>
@@ -94,13 +90,50 @@
                                 </tbody>
                             </table>
                         </div>
+                        <!-- Add a download button -->
+                        <!-- Add download buttons for PDF and Excel -->
+    <button id="download_pdf" class="btn btn-primary">Download PDF</button>
+    <button id="download_excel" class="btn btn-success">Download Excel</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </div>
+<!-- <script>
+    document.getElementById('download_pdf').addEventListener('click', function() {
+        var table = document.getElementById('example3');
+        TableExport(table, {
+            formats: ['pdf'],
+            exportButtons: false
+        }).exportTo('pdf');
+    });
 
+    document.getElementById('download_excel').addEventListener('click', function() {
+        var table = document.getElementById('example3');
+        TableExport(table, {
+            formats: ['xlsx'],
+            exportButtons: false
+        }).exportTo('xlsx');
+    });
+</script> -->
+<!-- <script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script> -->
 <!--Body Part End-->
 <?php include ('includes/scripts.php');?>
 <?php include ('includes/footer.php');?>

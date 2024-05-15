@@ -164,7 +164,7 @@
                             </h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered table-striped" id="example">
+                            <table class="table table-bordered table-striped" id="example1">
                                 <thead>
                                     <tr>
                                         <th>Id</th>

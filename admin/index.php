@@ -104,7 +104,7 @@
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="categoryList.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="category.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -179,12 +179,12 @@
                     echo "<h3>No Data</h3>";
                   }
                 ?>
-                <p>Categories of Offense</p>
+                <p>Counts of Categories</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="category.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="categoryList.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

@@ -5,7 +5,7 @@ include ('includes/header.php');?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <section class="content">
-        <div class="container" style="padding-top: 50px;">
+        <div class="container" style="padding-top: 50px; padding-bottom: 80px;">
             <div class="row" >
                 <div class="col-md-12">
                 <?= alertMessage()?>
@@ -21,7 +21,6 @@ include ('includes/header.php');?>
                                     <tr>
                                         <th>Id</th>
                                         <th>Name</th>
-                                        <th>Status</th>
                                         <th>View</th>
                                     </tr>
                                 </thead>
@@ -38,9 +37,6 @@ include ('includes/header.php');?>
                                                     <tr>
                                                         <td><?php echo $cate['cat_id'];?></td>
                                                         <td><?php echo $cate['name'];?></td>
-                                                        <td>
-                                                            <input type="checkbox"  <?php echo $cate['status'] == '1' ? 'checked' : '';?> readonly/>
-                                                        </td>
                                                         <td>
                                                             <a href="#" class="btn btn-info" style="margin-right: 10px;">View</a>
                                                         </td>

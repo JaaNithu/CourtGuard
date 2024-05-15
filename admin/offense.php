@@ -98,7 +98,7 @@
                             <h4 style="justify-content-center"><?php echo 'Count of '.$row['category_name'] ?></h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered table-striped" id="example">
+                            <table class="table table-bordered table-striped" id="example1">
                             <?php
                             if(isset($_GET['cate_id']))
                             {
