@@ -190,6 +190,34 @@
           <!-- ./col -->
         </div>
         <!-- /.row 1-->
+        <!-- row 2-->
+        <div class="row">
+          <div class="col-lg-4 col-6" >
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <?php
+                  $male_offenders_query =
+                  "SELECT * FROM cr_details WHERE gender = 'Male' ";
+                  $male_offenders_query_run = mysqli_query($con, $male_offenders_query);
+                  if ($male_offenders_total = mysqli_num_rows($male_offenders_query_run))
+                  {
+                    echo '<h3>'. $male_offenders_total .'</h3>';
+                  }else
+                  {
+                    echo "<h3>No Data</h3>";
+                  }
+                ?>
+                <p>DS Division</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="dsDivision.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- /.row 1-->
 
         </div><!-- /.container-fluid -->
     </section>

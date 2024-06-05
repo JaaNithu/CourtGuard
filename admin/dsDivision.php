@@ -1,9 +1,11 @@
-<?php 
+<?php
+    include ('config/dbcon.php');
+
     include ('includes/header.php');
     include ('includes/topbar.php');
     include ('includes/sidebar.php');
-    include ('config/dbcon.php');
 ?>
+
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -18,13 +20,14 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Recent Offense Details</li>
+              <li class="breadcrumb-item active">Registered Offenders Details</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+
 
     <section class="content">
         <div class="container">
@@ -37,28 +40,25 @@
                         }
                     ?>
                     <div class="card">
-                    <div class="card-header">
+                        <div class="card-header">
+                            <h3 class="card-title">DS Division</h3>
                             <a href="index.php"  class="btn btn-danger float-right">Back</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table id="example5" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Photo</th>
-                                        <th>NIC</th>
-                                        <th>Register No</th>
-                                        <th>Case No</th>
-                                        <th>Full Name</th>
-                                        <th>Action</th>
+                                        <th>DS Division</th>
+                                        <th>Male</th>
+                                        <th>Female</th>
+                                        <th>Total</th>
+                                        <th>View</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $cr_details_query = "SELECT *
-                                        FROM cr_details
-                                        WHERE offence_date >= DATE_SUB(NOW(), INTERVAL 2 MONTH)";
+                                        $cr_details_query = "SELECT * FROM ds_division";
                                         $cr_details_query_run = mysqli_query($con, $cr_details_query);
 
                                         if(mysqli_num_rows($cr_details_query_run) > 0){
@@ -67,13 +67,11 @@
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $row['name'];?></td>
-                                                    <td><img src="uploads/offenders/<?php echo $row['photo'];?>" width="50px" height="50px"/></td>
-                                                    <td><?php echo $row['nic'];?></td>
-                                                    <td><?php echo $row['register_number'];?></td>
-                                                    <td><?php echo $row['case_no'];?></td>
-                                                    <td><?php echo $row['full_name'];?></td>
+                                                    <td><?php echo $row['male'];?></td>
+                                                    <td><?php echo $row['female'];?></td>
+                                                    <td><?php echo $row['total_count'];?></td>
                                                     <td>
-                                                        <a href="view_recent_offense.php?nic=<?php echo $row['nic']; ?>" class="btn btn-info viewBtn">View</a>
+                                                        <a href="viewDetails.php?nic=<?php echo $row['ds_id']; ?>" class="btn btn-info viewBtn">View</a>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -97,6 +95,6 @@
     </section>
 
 </div>
+<!--Body Part End-->
 <?php include ('includes/scripts.php');?>
-
 <?php include ('includes/footer.php');?>

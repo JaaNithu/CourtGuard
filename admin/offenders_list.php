@@ -74,7 +74,17 @@
                         </div>
                         <div class="form-group">
                             <label for="">DS Division</label>
-                            <input type="text" name="ds_division" class="form-control" placeholder="Name">
+                            <select name="ds_division" class="form-control" id="ds_division">
+                                <option value="">Select DS Division</option>
+                                <?php
+                                // Assuming $conn is your database connection
+                                $query = "SELECT ds_id, name FROM ds_division";
+                                $result = mysqli_query($con, $query);
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    echo "<option value='" . $row['ds_id'] . "'>" . $row['name'] . "</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="">GS Division</label>
