@@ -178,7 +178,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example5" class="table table-bordered table-striped">
+                            <table id="" class="table table-bordered table-striped">
                                 <?php
                                     if(isset($_GET['nic'])){
                                         $cr_nic = $_GET['nic'];
